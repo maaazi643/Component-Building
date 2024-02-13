@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>02-carousel</title>
+
+    <style>
+      /*
+              SPACING SYSTEM (px)
+              2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+              FONT SIZE SYSTEM (px)
+              10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+            */
+
+      /*
+              Main Color -- #087f5b
+              Grey Color -- #343a40
+            */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        /* font-family: "Inter", sans-serif; */
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .carousel {
+        width: 700px;
+        margin: 200px auto;
+        display: flex;
+        background-color: #087f5b;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 24px;
+        color: white;
+        position: relative;
+      }
+
+      /* .carousel::before {
+        content: "name";
+        position: absolute;
+        left: -30px;
+        background-color: red;
+        padding: 8px;
+        border-radius: 50%;
+      }
+      .carousel::after {
+        content: "name";
+        position: absolute;
+        right: -20px;
+        background-color: red;
+      } */
+
+      .text {
+        line-height: 1.6;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 32px;
+      }
+
+      figure {
+        color: #f1f3f5;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+      img {
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="./images/hero.jpg" alt="Chair Picture" />
+      <div>
+        <p class="text">
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
+          itaque, reiciendis deserunt consectetur incidunt amet corporis, eaque
+          molestiae."
+        </p>
+
+        <figure>
+          <p class="name">Maria de Almeida</p>
+          <p class="title">Senior Product Manager at Google</p>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
