@@ -14,17 +14,18 @@
 
     <style>
       /*
-              SPACING SYSTEM (px)
-              2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+        SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-              FONT SIZE SYSTEM (px)
-              10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-            */
+        FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
 
       /*
-              Main Color -- #087f5b
-              Grey Color -- #343a40
-            */
+         Main Color -- #087f5b
+        Grey Color -- #343a40
+        
+      */
 
       * {
         margin: 0;
@@ -43,66 +44,122 @@
       }
 
       .carousel {
-        width: 700px;
-        margin: 200px auto;
-        display: flex;
+        width: 800px;
+        margin: 100px auto;
         background-color: #087f5b;
+        color: #e6fcf5;
+        padding: 32px 64px 32px 84px;
+        border-radius: 8px;
+
+        display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 24px;
-        color: white;
+        gap: 84px;
         position: relative;
       }
 
-      /* .carousel::before {
-        content: "name";
-        position: absolute;
-        left: -30px;
-        background-color: red;
-        padding: 8px;
-        border-radius: 50%;
-      }
-      .carousel::after {
-        content: "name";
-        position: absolute;
-        right: -20px;
-        background-color: red;
-      } */
-
       .text {
-        line-height: 1.6;
         font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 32px;
+        line-height: 1.6;
+        margin-bottom: 24px;
       }
 
-      figure {
-        color: #f1f3f5;
+      .name,
+      .title {
+        color: #c3fae8;
         font-size: 14px;
         line-height: 1.5;
         letter-spacing: 1px;
       }
+
       img {
-        width: 30%;
+        height: 200px;
+        transform: scale(1.5);
+        border-radius: 8px;
+        box-shadow: 0 24px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn {
+        background-color: #fff;
+        border-radius: 50%;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn--left {
+        /* position: absolute; */
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-icon {
+        width: 32px;
+        height: 32px;
+        stroke: #087f5b;
       }
     </style>
   </head>
   <body>
     <div class="carousel">
       <img src="./images/hero.jpg" alt="Chair Picture" />
-      <div>
+      <blockquote>
         <p class="text">
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
           itaque, reiciendis deserunt consectetur incidunt amet corporis, eaque
           molestiae."
         </p>
 
-        <figure>
-          <p class="name">Maria de Almeida</p>
-          <p class="title">Senior Product Manager at Google</p>
-        </figure>
-      </div>
+        <p class="name">Maria de Almeida</p>
+        <p class="title">Senior Product Manager at Google</p>
+      </blockquote>
+
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
     </div>
   </body>
 </html>
